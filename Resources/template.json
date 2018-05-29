@@ -34,7 +34,7 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
-                    "functionAppNames": {
+                    "functionAppName": {
                         "value": "[parameters('functionAppNames')[copyIndex()]]"
                     },
                     "appServicePlanId": {
@@ -44,6 +44,10 @@
                         "value": "[parameters('environmentName')]"
                     }
                 }
+            },
+            "copy": {
+                "name": "FunctionAppCopy",
+                "count": "[length(parameters('functionAppNames'))]"
             }
         }
     ],
