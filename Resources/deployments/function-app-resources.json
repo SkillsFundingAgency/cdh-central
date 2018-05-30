@@ -32,6 +32,10 @@
                         {
                             "name": "MSDEPLOY_RENAME_LOCKED_FILES",
                             "value": "1"
+                        },
+                        {
+                            "name": "FUNCTIONS_EXTENSION_VERSION",
+                            "value": "beta"
                         }
                     ]
                 }
