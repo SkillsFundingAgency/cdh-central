@@ -261,3 +261,7 @@ __pycache__/
 *.pyc
 /NCS.CDS.Address/host.json
 /NCS.CDS.Address/.gitignore
+/NCS.CDS.Diversity/host.json
+/NCS.CDS.Diversity/.gitignore
+/NCS.CDS.Diversity/NCS.CDS.Diversity/host.json
+/NCS.CDS.Diversity/NCS.CDS.Diversity/.gitignore
