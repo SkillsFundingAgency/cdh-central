@@ -20,11 +20,13 @@ namespace NCS.CDS.Diversity.GetDiversityHttpTrigger
                {
                    DiversityId = Guid.Parse("b11676c9-e17f-4658-b35e-3fdc23b4adb3"),
                    CustomerId = Guid.NewGuid(),
+                   ConsentToCollectLLDDHealth = true,
+                   DateAndTimeLLDDHealthConsentCollected = DateTime.UtcNow,
                    LLDDHealthProblemDeclarationId = 1,
                    PrimaryLLDDHeathProblemId = 2,
+                   ConsentToCollectEthnicity = false,
                    SecondaryLLDDHeathProblemId = 3,
                    EthnicityId = Guid.NewGuid(),
-                   GenderId = Guid.NewGuid(),
                    DateCollected = DateTime.UtcNow,
                    LastModifiedDate = DateTime.UtcNow,
                    LastModifiedBy = Guid.Empty
@@ -33,11 +35,13 @@ namespace NCS.CDS.Diversity.GetDiversityHttpTrigger
                 {
                     DiversityId = Guid.Parse("2f9e4ece-95d9-444b-8833-b433f5fd2190"),
                     CustomerId = Guid.NewGuid(),
+                    ConsentToCollectLLDDHealth = false,
                     LLDDHealthProblemDeclarationId = 1,
                     PrimaryLLDDHeathProblemId = 2,
+                    ConsentToCollectEthnicity = true,
+                    DateAndTimeEthnicityCollected = DateTime.UtcNow,
                     SecondaryLLDDHeathProblemId = 3,
                     EthnicityId = Guid.NewGuid(),
-                    GenderId = Guid.NewGuid(),
                     DateCollected = DateTime.UtcNow,
                     LastModifiedDate = DateTime.UtcNow,
                     LastModifiedBy = Guid.Empty
@@ -46,11 +50,14 @@ namespace NCS.CDS.Diversity.GetDiversityHttpTrigger
                 {
                     DiversityId = Guid.Parse("67fefdd2-6e1c-48b8-b9be-2adc5d0d48c4"),
                     CustomerId = Guid.NewGuid(),
+                    ConsentToCollectLLDDHealth = true,
+                    DateAndTimeLLDDHealthConsentCollected = DateTime.UtcNow,
                     LLDDHealthProblemDeclarationId = 1,
                     PrimaryLLDDHeathProblemId = 2,
+                    ConsentToCollectEthnicity = true,
+                    DateAndTimeEthnicityCollected = DateTime.UtcNow,
                     SecondaryLLDDHeathProblemId = 3,
                     EthnicityId = Guid.NewGuid(),
-                    GenderId = Guid.NewGuid(),
                     DateCollected = DateTime.UtcNow,
                     LastModifiedDate = DateTime.UtcNow,
                     LastModifiedBy = Guid.Empty

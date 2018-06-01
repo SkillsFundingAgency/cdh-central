@@ -10,21 +10,28 @@ namespace NCS.CDS.Diversity.Models
         [Required]
         public Guid CustomerId { get; set; }
 
+        public bool ConsentToCollectLLDDHealth { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime DateAndTimeLLDDHealthConsentCollected { get; set; }
+
         [Required]
         public int LLDDHealthProblemDeclarationId { get; set; }
 
         [Required]
         public int PrimaryLLDDHeathProblemId { get; set; }
 
+        public bool ConsentToCollectEthnicity { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime DateAndTimeEthnicityCollected { get; set; }
+
         [Required]
         public int SecondaryLLDDHeathProblemId { get; set; }
 
         [Required]
         public Guid EthnicityId { get; set; }
-
-        [Required]
-        public Guid GenderId { get; set; }
-
+ 
         [DataType(DataType.DateTime)]
         public DateTime DateCollected { get; set; }
 
