@@ -5,5 +5,5 @@ param(
 )
 
 Import-Module $ModulePath
-
+#test
 Get-Swagger -FunctionAppName $FunctionAppName -ResourceGroup $ResourceGroup
