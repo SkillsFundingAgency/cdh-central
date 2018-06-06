@@ -1,9 +1,13 @@
 param(
 	$ModulePath,
 	$FunctionAppName,
-	$ResourceGroup
+	$ResourceGroup,
+	$OutputFilePath
 )
 
 Import-Module $ModulePath
-#test
-Get-Swagger -FunctionAppName $FunctionAppName -ResourceGroup $ResourceGroup
+$Swagger = Get-Swagger -FunctionAppName $FunctionAppName -ResourceGroup $ResourceGroup
+$FileName = "$($FunctionAppName)_swagger-def_$([DateTime]::Now.ToString("yyyyMMdd-hhmmss"))"
+$OutputFile = New-Item -Path $OutputFilePath -Name $FileName
+Set-Content -Path $OutputFile.FullName -Value $Swagger
+Write-Host "##[task.setvariable variable=SwaggerFile;isSecret=false;isOutput=true;]$($OutputFile.FullName)"
