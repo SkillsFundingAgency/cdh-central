@@ -14,5 +14,5 @@ Write-Verbose -Message "Filename: $FileName"
 $OutputFile = New-Item -Path $OutputFilePath -Name $FileName
 Set-Content -Path $OutputFile.FullName -Value ($Swagger | ConvertTo-Json)
 Write-Verbose "SwaggerFile release variable $env:SwaggerFile"
-Write-Output "##[task.setvariable variable=SwaggerFile;]$FileName"
+Write-Output "##vso[task.setvariable variable=SwaggerFile;]$FileName"
 Write-Verbose "SwaggerFile release variable $env:SwaggerFile"
