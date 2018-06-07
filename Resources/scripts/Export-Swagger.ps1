@@ -13,5 +13,5 @@ Write-Verbose -Message $($Swagger | ConvertTo-Json)
 $FileName = "$($FunctionAppName)_swagger-def.json"
 Write-Verbose -Message "Filename: $FileName"
 $OutputFile = New-Item -Path $OutputFilePath -Name $FileName
-Set-Content -Path $OutputFile.FullName -Value $Swagger
+Set-Content -Path $OutputFile.FullName -Value ($Swagger | ConvertTo-Json)
 Write-Host "##[task.setvariable variable=SwaggerFile;isSecret=false;isOutput=true;]$FileName"
